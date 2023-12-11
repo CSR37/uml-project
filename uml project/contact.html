@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <div class="logob">
+                    <li class="mylogo"><img src="https://i.ibb.co/dkt9CJc/mylogofinalfff.png" alt="Vehicle marketplace"></li>
+                </div>
+                <li><a href="profile.html" target="_blank">profile</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="index1.html">Home</a></li>
+            </ul>
+        </nav>
+        <p class="mypgh">Contact</p>
+<div class="contactus">
+  
+    <form class="myform" onsubmit="return validateForm()">
+        <div class="mycon">
+            <div>
+                <h3>Contact Form</h3>
+                <p class="myreq">Kindly contact us!</p>
+            </div>
+            <div class="myuname">
+                <input type="text" placeholder="First Name" id="firstName" class="name1">
+                <input type="text" placeholder="Last Name" id="lastName" class="name2">
+                <div id="nameError" class="error"></div>
+            </div>
+            <div>
+                <input type="text" placeholder="Email-ID" id="email" class="mymail">
+                <div id="emailError" class="error"></div>
+            </div>
+            <div>
+                <textarea name="mydescription" id="description" placeholder="Write your description" cols="90" rows="10"
+                    class="mymes"></textarea>
+                <div id="descriptionError" class="error"></div>
+            </div>
+            <div>
+                <input type="submit" value="Submit" id="submit" class="mysub">
+            </div>
+           
+        </div>
+    </form>
+        <div class="od">
+            <div class="odd">
+            <h2 class="odc">Contact Us</h2>
+            <pre class="oda">
+                <p><strong>Address:</strong> Robinson road, Visakhapatnam,Andhra Pradesh</p>
+                <p><strong>Phone no:</strong> 9122233888</p>
+                <p><strong>Email:</strong> info@WanderWheels.com</p>
+                
+            </pre>
+        </div>
+        </div>
+  
+</div>
+    <script>
+        function validateForm() {
+            // Reset previous error messages
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("descriptionError").textContent = "";
+
+            // Get input values
+            const firstName = document.getElementById("firstName").value;
+            const email = document.getElementById("email").value;
+            const description = document.getElementById("description").value;
+
+            // Regular expression for email validation
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+            // Validate First Name
+            if (firstName.trim() === "") {
+                document.getElementById("nameError").textContent = "First Name is required.";
+                return false;
+            }
+
+            // Validate Email
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailError").textContent = "Please enter a valid email address.";
+                return false;
+            }
+
+            // Validate Description
+            if (description.trim() === "") {
+                document.getElementById("descriptionError").textContent = "Description is required.";
+                return false;
+            }
+
+            // If all fields are filled correctly, the form will submit
+            return true;
+        }
+    </script>
+</body>
+</html>

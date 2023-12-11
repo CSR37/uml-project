@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle_Marketplace</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">   
+            <ul>
+                <div class="logob">
+                <li class="mylogo"><img src="https://i.ibb.co/dkt9CJc/mylogofinalfff.png" alt="Vehicle marketplace"></li></div>
+                <li><a href="login.html" target="_blank">Login</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="services.html" target="_blank">Services</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="index.html">Home</a></li>   
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <h1>WanderWheels</h1>
+    </div>
+    <div>
+        <p> Explore the World, One Rental at a time</p>
+    </div>
+    <!-- signup form -->
+<div>
+    <form id="signup-form" action="signup.php" method="post">
+        <div class="signup">
+            <div class="uname">
+                <input type="text" name="username" placeholder="Username" id="username">
+            </div>
+            <div class="email">
+                <input type="email" name="email" placeholder="E-mail Id" id="email">
+            </div>
+            <div class="pass">
+                <input type="password" name="password" placeholder="Create Password" id="password">
+            </div>
+            <div class="sub">
+                <input type="submit" value="SignUp for free!">
+            </div>
+        </div>
+    </form>
+</div>
+
+
+    <script>
+        function validateForm() {
+            const usernameInput = document.getElementById("username");
+            const emailInput = document.getElementById("email");
+            const passwordInput = document.getElementById("password");
+
+            // Check if username is not empty
+            if (usernameInput.value.trim() === "") {
+                alert("Username is required.");
+                return false; // Prevent form submission
+            }
+
+            // Check if email is not empty and in a valid format
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (emailInput.value.trim() === "" || !emailPattern.test(emailInput.value)) {
+                alert("Please enter a valid email address.");
+                return false; // Prevent form submission
+            }
+
+            // Check if password is not empty
+            if (passwordInput.value.trim() === "") {
+                alert("Password is required.");
+                return false; // Prevent form submission
+            }
+
+            // Redirect to "index1.html" after successful validation
+            window.location.href = "index1.html";
+
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_Form</title>
+    <style>
+        @keyframes border-color-change {
+            0% {
+                border-color: blue;
+            }
+
+            25% {
+                border-color:yellow;
+            }
+
+            50% {
+                border-color:brown;
+            }
+
+            75% {
+                border-color:orangered;
+            }
+
+            100% {
+                border-color: red;
+            }
+        }
+
+
+
+        body {
+            background: url("https://i.ibb.co/WpvVQkf/uml.jpg") no-repeat center center fixed; 
+            background-size: cover;
+            background-position: center;
+            image-rendering:crisp-edges;
+            background-repeat: no-repeat;
+            background-color: aliceblue;
+            margin-left: 500px;
+        }
+
+        .mysubmit {
+            
+            color:white;
+            border: 3px solid darkred ;
+            border-radius: 8px;
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 95px;
+            background-color: black;
+        }
+
+        label {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight:bolder;
+            font-size:larger;
+        }
+
+
+
+        .uname {
+
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            font-size:large;
+            margin-left: 48px;
+            margin-top: 70px;
+            
+
+
+
+        }
+        .uname input{
+            width:80%;
+            height: 25px;
+            
+
+        }
+
+        .mypass input{
+            width:80%;
+            height: 25px;
+            
+
+        }
+        .mypass {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            font-size: large;
+            
+            margin-left: 48px;
+        }
+
+
+
+        
+
+        .myform {
+            width: 330px;
+            border: 4px solid black;
+            margin-top: 70px;
+            padding-left: 20px;
+            padding-right: 10px;
+            padding-bottom: 20px;
+            border-radius: 10px 10px 10px 10px;
+            animation: border-color-change 5s linear infinite;
+            color:dark black;
+            position:fixed;
+            background-color: beige;
+            height: 400px;
+            
+
+
+        }
+
+        h3 {
+            text-decoration: solid;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 40px;
+            margin-top: 30px;
+            box-sizing: border-box;
+            padding-top: 10px;
+        }
+        .mysubmit:hover{
+            background-color:springgreen;
+        }
+        .myreg{
+            text-align: right;
+
+        }
+        .error{
+            color: red; /* Change the text color to red */
+            font-weight: thin; /* Decrease font weight to thin */
+            font-size: smaller;
+        }
+    </style>
+</head>
+<body>
+    <form class="myform" id="login-form" method="post" action="login.php">
+        <h3>Login</h3>
+        <div class="uname">
+            <input type="text" placeholder="User_Name" name="myname" id="username">
+            <div id="usernameError" class="error"></div>
+        </div>
+        <br>
+        <br>
+        <div class="mypass">
+            <input type="password" placeholder="Password" name="mypassword" id="password">
+            <div id="passwordError" class="error"></div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div>
+            <input type="submit" value="Submit now" class="mysubmit">
+        </div>
+        
+    </form>
+
+    <script>
+        function validateForm() {
+            // Reset previous error messages
+            document.getElementById("usernameError").textContent = "";
+            document.getElementById("passwordError").textContent = "";
+
+            // Get form input values
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Validate the username
+            if (username === "") {
+                document.getElementById("usernameError").textContent = "Username is required.";
+                return false;
+            }
+
+            // Validate the password
+            if (password === "") {
+                document.getElementById("passwordError").textContent = "Password is required.";
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

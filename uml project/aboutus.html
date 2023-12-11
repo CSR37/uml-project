@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin:0;
+        }
+
+        body {
+
+            background: url("https://i.ibb.co/WpvVQkf/uml.jpg") no-repeat center center fixed;
+            background-size: cover;
+            
+            
+        }
+
+        header {
+
+            text-align: center;
+            
+
+        }
+
+        .navbar {
+            background-color: black;
+            border-radius: 30px;
+            margin-top: 10px;
+        }
+
+        /* the overflow will not allow below properties to override it's original property ex: here black color and radius of border */
+        .navbar ul {
+            overflow: auto;
+            align-items: center;
+            margin-top: 0;
+        }
+
+        .navbar li {
+            float: right;
+            list-style: none;
+            font-size: 20px;
+            margin: 13px 10px;
+            text-overflow: none;
+        }
+        .logob{
+            float: left;
+            padding:12px,75px;
+        }
+        .navbar li a {
+            padding: 8px 3px;
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
+            font-size: larger;
+        }
+
+        .navbar li a:hover {
+            background-color: burlywood;
+            color: red;
+        }
+
+        .mylogo img {
+            height: 2rem;
+            float: right;
+            padding-right: 300px;
+            border: 2px solid black;
+
+        }
+
+        .container {
+            width: 900px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            color: #333;
+        }
+
+        .computer img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .item {
+            margin: 20px 0;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: black;
+        }
+
+        .para {
+            font-size: 20px;
+            color: black;
+            line-height: 1.5;
+        }
+
+        .mydesc {
+            text-align: left;
+            margin-top: 10px;
+            font-size: 50px;
+            font-weight: bold;
+            margin: 50px;
+            padding-top: 5px;
+        }
+        .mydesc h1 {
+             font-size: larger;
+             text-align: left;
+             color: black;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            height: 200px;
+        }
+        .social-icons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social-icons a{
+            width:10%;
+        }
+        .footer p{
+            margin-top: 5rem;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+            
+        }
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /*.social-icons a img{
+            border: 2px solid black;
+            border-radius:50%;
+        }*/
+        
+
+       
+
+        .additional-info {
+            font-size: 20px;
+            margin-top: 10px;
+
+        }
+
+        /* New styles for team members section */
+        .team-members {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .team-member {
+            width: calc(25% - 20px);
+            /* Adjust the width as needed for four team members */
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 15px;
+            background-color: #f0f0f0;
+            /* Background color for team members */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        .team-member h4 {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .team-member p {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <div class="logob">
+                <li class="mylogo"><img src="https://i.ibb.co/dkt9CJc/mylogofinalfff.png" alt="Vehicle marketplace"></li></div>
+                <li><a href="profile.html" target="_blank">profile</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="index1.html">Home</a></li>   
+            </ul>
+        </nav>
+    </header>
+    <div class="mydesc">
+        <h1>About Us</h1>
+    </div>
+    <div class="container">
+
+        <div class="computer">
+            <img src="https://i.ibb.co/wryHWqL/abtus-image.jpg" alt="info">
+        </div>
+        <div class="item">
+            <h3>Our Mission</h3>
+            <p class="para">Our mission is simple: to make your travel experience as smooth and convenient as possible.
+                Whether you're planning a family vacation, a business trip, or need a temporary vehicle replacement, we
+                aim to provide you with the perfect vehicle solution tailored to your requirements.</p>
+        </div>
+        <div class="item">
+            <h3>Why Choose us</h3>
+
+            <div class="item">
+                <p class="para">
+                    <strong>Wide Selection of Vehicles:</strong> We offer a wide range of vehicles to suit every
+                    occasion and budget. From compact cars and SUVs to luxury cars and commercial vans, we have
+                    something for everyone.
+                </p>
+            </div>
+            <div class="item">
+                <p class="para">
+                    <strong>Quality and Safety:</strong> Your safety is our priority. We meticulously maintain our
+                    vehicles to the highest standards, ensuring they are always in excellent condition and equipped with
+                    the latest safety features.
+                </p>
+            </div>
+            <div class="item">
+                <p class="para">
+                    <strong>Competitive Pricing:</strong> We understand the importance of affordability. Our competitive
+                    pricing and flexible rental options ensure that you get the best value for your money.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <h3>Our Team</h3>
+            <p class="para">Meet our dedicated team of professionals who are passionate about what they do.</p>
+        </div>
+        <!-- New Team Members Section -->
+        <div class="team-members">
+            <div class="team-member">
+                <img src="https://i.ibb.co/1RzVNCX/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow-520826-1931.jpg"
+                    alt="Team Member 1">
+                <h4>John Doe</h4>
+                <p>t1</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.ibb.co/1RzVNCX/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow-520826-1931.jpg"
+                    alt="Team Member 2">
+                <h4>Jane Smith</h4>
+                <p>t2</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.ibb.co/1RzVNCX/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow-520826-1931.jpg"
+                    alt="Team Member 3">
+                <h4>Mike Johnson</h4>
+                <p>t3</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.ibb.co/1RzVNCX/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow-520826-1931.jpg"
+                    alt="Team Member 4">
+                <h4>Susan Brown</h4>
+                <p>t4</p>
+            </div>
+            <!-- Add more team members as needed -->
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#"><img src="https://i.ibb.co/s1XSKKs/facebook-3.png" alt="facebbok.com" width="45px"
+                    height="45px"></a>
+            <a href="#"><img src="https://i.ibb.co/4YK8XJh/twitter-1.png" alt="twitter.com" height="45px"
+                    width="45px"><i class="tw"></i></a>
+            <a href="#"><img src="https://i.ibb.co/Jxjrv1w/instagram-2.png" alt="instagram.com" height="45px"
+                    width="45px"><i class="ig"></i></a>
+
+            <!-- Add more social media icons and links as needed -->
+        </div>
+        <p class="additional-info">Copyright &copy; 2023 About Us. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
